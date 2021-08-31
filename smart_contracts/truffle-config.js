@@ -11,7 +11,11 @@ module.exports = {
     },
     rinkeby: {
       provider: () => new HDWalletProvider(process.env.MNEMONIC, process.env.RINKEBY_RPC_URL),
-      network_id: 4
+      network_id: 4,
+      gas: 5500000,        // Ropsten has a lower block limit than mainnet
+      confirmations: 2,    // # of confs to wait between deployments. (default: 0)
+      timeoutBlocks: 500,  // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true
     },
   },
   mocha: {},

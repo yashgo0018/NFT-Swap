@@ -1,0 +1,224 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "SwapCancelled",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "contract1Address",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "token1",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum ERC1155Swap.NFTType",
+        "name": "type1",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "contract2Address",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "token2",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum ERC1155Swap.NFTType",
+        "name": "type2",
+        "type": "uint8"
+      }
+    ],
+    "name": "SwapCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "counterParty",
+        "type": "address"
+      }
+    ],
+    "name": "SwapExecuted",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "swaps",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "contract1Address",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "token1",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum ERC1155Swap.NFTType",
+        "name": "type1",
+        "type": "uint8"
+      },
+      {
+        "internalType": "address",
+        "name": "contract2Address",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "token2",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum ERC1155Swap.NFTType",
+        "name": "type2",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bool",
+        "name": "done",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "contract1Address",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "token1",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "contract2Address",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "token2",
+        "type": "uint256"
+      }
+    ],
+    "name": "createSwap",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "swapId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "contract1Address",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "token1",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "contract2Address",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "token2",
+        "type": "uint256"
+      }
+    ],
+    "name": "executeSwap",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "swapId",
+        "type": "uint256"
+      }
+    ],
+    "name": "cancelSwap",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
